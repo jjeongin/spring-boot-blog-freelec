@@ -1,0 +1,44 @@
+{{>layout/header}} <!--add other files-->
+
+<h1>@jjeongin's First Spring Boot Web Service</h1>
+<div class="col-md-12">
+    <div class=row">
+        <div class="col-md-6">
+            <a href="/posts/save" role="button" class="btn btn-primary">New Post</a>
+            <!--if userName exists-->
+            {{#userName}}
+                Logged in as: <span id="user">{{userName}}</span>
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            {{/userName}}
+            <!--if userName doesn't exist-->
+            {{^userName}}
+                <a href="/oauth2/authorication/google" class="btn btn-success active" role="button">Google Login</a>
+            {{/userName}}
+        </div>
+    </div>
+    <br>
+    <!--Post List-->
+    <table class="table table-horizontal table-bordered">
+        <thread class="thread-strong">
+            <tr>
+                <th>Post No.</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Last Updated Date</th>
+            </tr>
+        </thread>
+        <tbody id="tbody">
+        <!--loop through post list-->
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
+</div>
+
+{{>layout/footer}}
