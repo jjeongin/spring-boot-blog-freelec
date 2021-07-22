@@ -32,5 +32,8 @@ dependencies {
     compile('com.h2database:h2') // in-memory relational database. will be used for JPA Test, local execution
     compile('org.springframework.boot:spring-boot-starter-mustache') // mustache
     compile('org.springframework.boot:spring-boot-starter-oauth2-client') //oauth
+    compile('org.springframework.session:spring-session-jdbc') // db for user data
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
 }

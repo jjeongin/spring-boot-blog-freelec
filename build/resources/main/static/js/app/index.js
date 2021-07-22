@@ -48,7 +48,7 @@ var main = {
            contentType:'application/json; charset=utf-8',
            data: JSON.stringify(data)
        }).done(function() {
-           alert('Post Updated 👀');
+           alert('Post Updated 🖋');
            window.location.href = '/';
        }).fail(function (error) {
            alert(JSON.stringify(error));
@@ -64,7 +64,7 @@ var main = {
            dataType: 'json',
            contentType:'application/json; charset=utf-8'
        }).done(function() {
-           alert('Post Deleted 🙊');
+           alert('Post Deleted 💭');
            window.location.href = '/';
        }).fail(function (error) {
            alert(JSON.stringify(error));
