@@ -33,6 +33,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-mustache') // mustache
     compile('org.springframework.boot:spring-boot-starter-oauth2-client') //oauth
     compile('org.springframework.session:spring-session-jdbc') // db for user data
+    compile('org.mariadb.jdbc:mariadb-java-client') // register maria db
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.security:spring-security-test')
