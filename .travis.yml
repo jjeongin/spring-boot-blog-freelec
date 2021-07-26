@@ -30,6 +30,17 @@ deploy:
     local_dir: deploy # dir set in before_deploy
     wait-until-deployed: true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY # set in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: springboot-build-freelec
+    key: spring-boot-blog-freelec.zip # pass build file
+    bundle_type: zip
+    application: spring-boot-blog-freelec # CodeDeploy application name
+    deployment_group: spring-boot-blog-freelec-group
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 
 # Email when CI completed successfully
 notifications:
