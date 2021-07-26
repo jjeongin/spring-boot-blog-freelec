@@ -15,7 +15,7 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r spring-boot-blog-freelec
+  - zip -r spring-boot-blog-freelec *
   - mkdir -p deploy
   - mv spring-boot-blog-freelec.zip deploy/spring-boot-blog-freelec.zip
 
