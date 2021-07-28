@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.springboot.book.freelec.web.ProfileControllerUnitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-28T16:28:32" hostname="Jeongins-MacBook-Pro.local" time="0.115">
+  <properties/>
+  <testcase name="if_no_real_profile_get_1st_one" classname="com.springboot.book.freelec.web.ProfileControllerUnitTest" time="0.114"/>
+  <testcase name="get_real_profile" classname="com.springboot.book.freelec.web.ProfileControllerUnitTest" time="0.001"/>
+  <testcase name="if_no_active_profile_get_default" classname="com.springboot.book.freelec.web.ProfileControllerUnitTest" time="0.0"/>
+  <system-out><![CDATA[01:28:32.617 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'oauth'
+01:28:32.621 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'real-db'
+01:28:32.663 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'real'
+01:28:32.663 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'oauth'
+01:28:32.664 [Test worker] DEBUG org.springframework.mock.env.MockEnvironment - Activating profile 'real-db'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
