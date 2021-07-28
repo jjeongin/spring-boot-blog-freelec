@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPOSITORY=/home/ecw-user/app/step2
+REPOSITORY=/home/ec2-user/app/step2
 PROJECT_NAME=spring-boot-blog-freelec
 
 echo "> Copy Build file"
