@@ -15,7 +15,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().headers().frameOptions().disable() // to use h2-console
                 .and().authorizeRequests() // authorize requests for diff urls
-                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll() //permit access to all users
+                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll() //permit access to all users
                 .antMatchers("/api/v1/**").hasRole(Role.USER.name()) //permit access only to USER roles
                 .anyRequest().authenticated() //for any other urls, only authenticated (log-inned) users can access
                 .and().logout().logoutSuccessUrl("/")
