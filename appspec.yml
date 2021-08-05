@@ -2,7 +2,7 @@ version: 0.0 # CodeDeploy ver.
 os: linux
 files:
   - source: / # CodeDeploy 에서 전달해준 파일 중 destination 으로 이동시킬 대상
-    destination: /home/ec2-user/app/step2/zip/ # source 에서 지정된 파일을 받을 위치
+    destination: /home/ec2-user/app/step3/zip/ # source 에서 지정된 파일을 받을 위치
     overwrite: yes
 
 permissions: # CodeDeploy -> EC2 로 넘겨준 파일들을 모두 ec2-user 권한을 갖게 함
@@ -12,7 +12,15 @@ permissions: # CodeDeploy -> EC2 로 넘겨준 파일들을 모두 ec2-user 권�
     group: ec2-user
 
 hooks: # CodeDeploy 배포 단계에서 실행할 명령어를 지정
+  AfterInstall:
+    - location: stop.sh # shut down spring boot not connected to nginx
+      timeout: 60
+      runas: ec2-user
   ApplicationStart:
-    - location: deploy.sh
+    - location: start.sh # start new spring boot with port not connected to nginx
+      timeout: 60
+      runas: ec2-user
+  ValidateService:
+    - location: health.sh # check if spring boot is executed well
       timeout: 60
       runas: ec2-user
