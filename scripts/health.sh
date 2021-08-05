@@ -20,7 +20,7 @@ do
   if [ ${UP_COUNT} -ge 1 ]
   then # $up_count >= 1 (check if str "real" is included)
     echo "> Health check success"
-    swith_proxy
+    switch_proxy
     break
   else
     echo "> Can't verify health check or not executable"
