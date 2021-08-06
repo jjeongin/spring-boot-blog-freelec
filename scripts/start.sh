@@ -11,6 +11,9 @@ echo "> cp $REPOSITORY/zip/*.jar $REPOSITORY/"
 
 cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
+echo "> New Application Deploy"
+JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
+
 echo "> JAR NAME: $JAR_NAME"
 
 echo "> make $JAR_NAME executable"

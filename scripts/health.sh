@@ -24,7 +24,7 @@ do
     break
   else
     echo "> Can't verify health check or not executable"
-    echo "> Health check: ${REPONSE}"
+    echo "> Health check: ${RESPONSE}"
   fi
 
   if [ ${RETRY_COUNT} -eq 10 ]
